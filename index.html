@@ -4,9 +4,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejercicio CSS Grid Areas - Layout Moderno</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
+<div class="container">
+    <header class="header">
+        <!-- Checkbox invisible DEBE estar al principio -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <div class="logo">
+            <div class="marco_logo">
+                <img src="" alt="">
+                GERB DEVELOPERS
+            </div>
+            <!-- Botón hamburguesa -->
+            <label for="menu-toggle" class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+        <!-- Nav como hermano del checkbox para que funcione ~ -->
+        <nav class="nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre">Sobre Nosotros</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+    <main class="main">
+        <h1>Bienvenido a CSS Grid Areas</h1>
+        <div class="card">
+            <h2>¿Qué son las Grid Areas?</h2>
+            <p>Las <strong>grid areas</strong> son una forma intuitiva de crear layouts en CSS Grid. En lugar de
+                usar números de línea, podemos nombrar las áreas de nuestro grid y posicionar elementos usando esos
+                nombres.</p>
+            <p>Este layout utiliza solo <strong>4 áreas</strong>:</p>
+            <p>• <strong>header:</strong> Contiene logo y navegación</p>
+            <p>• <strong>main:</strong> Contenido principal (esta área)</p>
+            <p>• <strong>sidebar:</strong> Barra lateral con widgets</p>
+            <p>• <strong>footer:</strong> Pie de página</p>
+        </div>
+        <div class="card">
+            <h2>Ventajas del Layout con Grid Areas</h2>
+            <p>✅ <strong>Intuitivo:</strong> Los nombres de las áreas son descriptivos</p>
+            <p>✅ <strong>Flexible:</strong> Fácil de reorganizar cambiando grid-template-areas</p>
+            <p>✅ <strong>Responsive:</strong> Se adapta perfectamente a diferentes pantallas</p>
+            <p>✅ <strong>Mantenible:</strong> Código más limpio y fácil de entender</p>
+        </div>
+        <div class="card">
+            <h2>Menú Móvil sin JavaScript</h2>
+            <p>Este layout incluye un <strong>menú móvil</strong> que funciona solo con HTML y CSS usando la técnica
+                del "checkbox trick":</p>
+            <p>✅ <strong>Checkbox invisible:</strong> <code>&lt;input type="checkbox" id="menu-toggle"&gt;</code>
+            </p>
+            <p>✅ <strong>Label como botón:</strong> <code>&lt;label for="menu-toggle"&gt;</code></p>
+            <p>✅ <strong>CSS selector:</strong> <code>.menu-toggle:checked ~ .nav</code></p>
+            <p>✅ <strong>Animación suave:</strong> Transiciones CSS</p>
+            <p><strong>¡Prueba redimensionar la ventana para ver el menú hamburguesa!</strong></p>
+        </div>
+    </main>
+    <aside class="sidebar">
+        <h3>Contenido Adicional</h3>
+        <div class="widget">
+            <h4>🎯 Artículos Populares</h4>
+            <ul>
+                <li>Introducción a CSS Grid</li>
+                <li>Layouts Responsive</li>
+                <li>Flexbox vs Grid</li>
+                <li>Diseño Web Moderno</li>
+            </ul>
+        </div>
+        <div class="widget">
+            <h4>📅 Eventos</h4>
+            <ul>
+                <li>Workshop CSS Grid</li>
+                <li>Conferencia Web</li>
+                <li>Meetup Frontend</li>
+            </ul>
+        </div>
+        <div class="widget">
+            <h4>🔗 Enlaces Útiles</h4>
+            <ul>
+                <li>MDN Web Docs</li>
+                <li>CSS Grid Garden</li>
+                <li>Grid by Example</li>
+            </ul>
+        </div>
+    </aside>
+    <footer class="footer">
+        © 2025 - Ejercicio CSS Grid Areas | Creado para aprender
+    </footer>
+</div>
+<div class="grid-info">
+    <strong>Grid Areas:</strong><br>
+    📋 header<br>
+    📝 main<br>
+    📌 sidebar<br>
+    📄 footer
+</div>
 
 <body>
 
